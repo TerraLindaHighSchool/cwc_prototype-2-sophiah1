@@ -15,7 +15,8 @@ public class DetectCollisions : MonoBehaviour
     {
         
     }
-  void OnTriggerEnter(Coillider other)
+  void OnTriggerEnter(Collider other)
+        //when pizza hits animal they both disapear
     {
         Destroy(gameObject);
         Destroy(other.gameObject);

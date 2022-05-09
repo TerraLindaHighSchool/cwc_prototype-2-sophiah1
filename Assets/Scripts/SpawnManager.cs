@@ -12,6 +12,7 @@ public class SpawnManager : MonoBehaviour
     
     // Start is called before the first frame update
     void Start()
+        //spawning repeats on its own
     {
         InvokeRepeating("SpawnRandomAnimal", StartDelay, SpawnInterval);
     }
@@ -23,6 +24,7 @@ public class SpawnManager : MonoBehaviour
         
     }
     void SpawnRandomAnimal()
+        //spawns animals in random areas on the map
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
